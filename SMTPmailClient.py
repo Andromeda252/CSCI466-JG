@@ -8,7 +8,7 @@ mailserver = 'list.winthrop.edu'
 
 # Create socket called clientSocket and establish a TCP connection with mailserver
 clientSocket = socket(AF_INET,SOCK_STREAM)
-clientSocket.connect((mailserver, 12000))
+clientSocket.connect((mailserver, 25))
 recv = clientSocket.recv(1024).decode()
 print(recv)
 if recv[:3] != '220':
